@@ -24,6 +24,13 @@
     .app-card .ico { width:46px; height:46px; flex-shrink:0; background:var(--cream); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; }
     .app-card .name { font-weight:600; font-size:15px; }
     .app-card .desc { font-size:13px; color:#6b6f68; margin-top:2px; }
+    a.app-card { text-decoration:none; color:inherit; transition:box-shadow .15s ease, transform .15s ease; }
+    a.app-card:hover { box-shadow:0 4px 16px rgba(58,61,56,0.10); transform:translateY(-1px); }
+    .app-card .grow { flex:1; min-width:0; }
+    .store-chip { flex-shrink:0; font-size:12px; font-weight:600; color:var(--green-deep); background:rgba(126,155,132,0.12); border-radius:999px; padding:5px 12px; white-space:nowrap; }
+    .soon-chip { flex-shrink:0; font-size:12px; font-weight:600; color:#8a6d1f; background:rgba(245,203,92,0.28); border-radius:999px; padding:5px 12px; white-space:nowrap; }
+    h3.group { font-size:15px; font-weight:700; color:#6b6f68; margin:26px 0 12px; }
+    h3.group:first-of-type { margin-top:0; }
     .info-table { width:100%; border-collapse:collapse; margin-top:6px; }
     .info-table th, .info-table td { text-align:left; padding:12px 0; font-size:15px; border-bottom:1px solid rgba(58,61,56,0.07); vertical-align:top; }
     .info-table th { width:130px; color:#6b6f68; font-weight:600; }
@@ -45,10 +52,63 @@
     </section>
     <section>
       <h2>Our Apps</h2>
+
+      <h3 class="group">출시된 앱</h3>
       <div class="apps">
-        <div class="app-card"><div class="ico">⏰</div><div><div class="name">기상미션 (Wake Mission)</div><div class="desc">미니게임을 깨야 알람이 꺼지는 게임형 알람 앱</div></div></div>
-        <div class="app-card"><div class="ico">📚</div><div><div class="name">비춰보카 </div><div class="desc">OCR 기반 영단어 학습 · 간격 반복 암기 앱</div></div></div>
-        <div class="app-card"><div class="ico">👶</div><div><div class="name">응애응애 (예정)</div><div class="desc">아기 울음 분석 · 육아 기록 도우미 앱</div></div></div>
+        <a class="app-card" href="https://play.google.com/store/apps/details?id=com.almightyhg.wake_up" target="_blank" rel="noopener">
+          <div class="ico">⏰</div>
+          <div class="grow"><div class="name">기상미션 (Wake Mission)</div><div class="desc">미니게임을 깨야 알람이 꺼지는 게임형 알람 앱</div></div>
+          <span class="store-chip">Google Play ↗</span>
+        </a>
+        <a class="app-card" href="https://play.google.com/store/apps/details?id=com.almightyhg.scan_voca" target="_blank" rel="noopener">
+          <div class="ico">📚</div>
+          <div class="grow"><div class="name">비춰보카 (Scan Voca)</div><div class="desc">카메라로 스캔해 만드는 나만의 영단어장 · 간격 반복 암기</div></div>
+          <span class="store-chip">Google Play ↗</span>
+        </a>
+      </div>
+
+      <h3 class="group">출시 예정 앱</h3>
+      <div class="apps">
+        <div class="app-card">
+          <div class="ico">✏️</div>
+          <div class="grow"><div class="name">틀려도영어 (Mistakes Welcome)</div><div class="desc">빨간 펜 없는 AI 첨삭 영어일기 · 오늘 한 줄부터</div></div>
+          <span class="soon-chip">출시 준비 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🧩</div>
+          <div class="grow"><div class="name">꼭꼭: 숨은 두부 (Find the Tofu)</div><div class="desc">위장 페인트로 꼭꼭 숨은 두부를 찾는 숨바꼭질 게임</div></div>
+          <span class="soon-chip">출시 준비 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🌙</div>
+          <div class="grow"><div class="name">슬립웨이브 (SleepWave)</div><div class="desc">편안한 사운드와 함께하는 수면 도우미</div></div>
+          <span class="soon-chip">출시 준비 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🧾</div>
+          <div class="grow"><div class="name">하루영수증 (Day Receipt)</div><div class="desc">하루의 감정·선택·소비를 영수증 한 장으로 발행하는 기록 앱</div></div>
+          <span class="soon-chip">개발 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🔮</div>
+          <div class="grow"><div class="name">운세연구소 (Saju Lab)</div><div class="desc">사주 · 관상 · 궁합 · 오늘의 운세</div></div>
+          <span class="soon-chip">개발 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🧊</div>
+          <div class="grow"><div class="name">욱하지마 (Anger Lab)</div><div class="desc">욱하는 순간 90초 식히기 · 감정 기록과 돌아보기</div></div>
+          <span class="soon-chip">개발 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">🫧</div>
+          <div class="grow"><div class="name">빠작 (Ppajak)</div><div class="desc">만지고 부수는 촉감 ASMR 장난감</div></div>
+          <span class="soon-chip">개발 중</span>
+        </div>
+        <div class="app-card">
+          <div class="ico">👶</div>
+          <div class="grow"><div class="name">응애응애 (AYA)</div><div class="desc">아기 울음 분석 · 육아 기록 도우미 앱</div></div>
+          <span class="soon-chip">개발 중</span>
+        </div>
       </div>
     </section>
     <section>
