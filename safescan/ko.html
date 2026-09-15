@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>개인정보처리방침 — 세이프스캔</title>
+<meta name="description" content="QR·링크를 열기 전에 피싱 위험을 확인하는 앱 세이프스캔의 개인정보처리방침입니다." />
+<link rel="alternate" hreflang="en" href="https://almightyhg-cp.github.io/safescan/" />
+<link rel="alternate" hreflang="ko" href="https://almightyhg-cp.github.io/safescan/ko.html" />
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Malgun Gothic", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1f2328;
+    background: #ffffff;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+  .eff { color: #6b7280; font-size: .95rem; margin: 0 0 20px; }
+  .lang { font-size: .95rem; margin: 0 0 12px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: #2563eb; word-break: break-word; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; }
+  footer { margin-top: 40px; color: #6b7280; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0d1117; color: #e6edf3; }
+    h2 { border-top-color: #30363d; }
+    .eff, footer { color: #9198a1; }
+    a { color: #4493f8; }
+    th, td { border-color: #30363d; }
+    th { background: #161b22; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>개인정보처리방침 — 세이프스캔</h1>
+  <p class="lang"><a href="index.html">English</a> · <strong>한국어</strong></p>
+  <p class="eff"><strong>시행일: 2026년 9월 15일</strong></p>
+
+  <p>앱 이름: <strong>세이프스캔</strong> (English: SafeScan) · 패키지: <code>com.almightyhg.safescan</code></p>
+
+  <h2>1. 요약</h2>
+  <p>세이프스캔은 QR 코드나 링크를 <strong>열기 전에</strong> 피싱·악성 앱 위험을 확인하는 앱입니다. 계정도, 로그인도, 이름·전화번호 입력란도 없습니다. 검사 기록은 <strong>기기 안에만</strong> 남고 90일 뒤 자동으로 지워집니다.</p>
+  <p>다만 링크의 위험을 확인하려면 <strong>검사하는 주소 자체가 기기 밖으로 나가는 순간</strong>이 있습니다(단축 주소의 목적지 확인, 구글 위험 목록 조회, 사용자가 직접 누른 신고). 무엇이 어디로 가는지 3장에 전부 적었습니다. 그 밖의 것은 나가지 않습니다.</p>
+
+  <h2>2. 기기 안에만 저장되는 것</h2>
+  <table>
+    <tr><th>항목</th><th>내용</th><th>저장 위치</th><th>삭제</th></tr>
+    <tr><td>검사 기록</td><td>검사한 주소·판정 등급·근거·검사 시각</td><td>기기 내부 저장소(SQLite)</td><td><strong>90일 지나면 자동 삭제</strong>. 기록 탭에서 언제든 전부 삭제 가능</td></tr>
+    <tr><td>신고 대기열</td><td>오프라인에서 누른 신고가 전송될 때까지 잠시 보관</td><td>기기 내부 저장소</td><td>전송 뒤 삭제</td></tr>
+    <tr><td>설정</td><td>광고 유예 시작 시각, 실행 횟수(리뷰 요청용), 차단 목록 갱신 시각</td><td>기기 내부 저장소</td><td>앱을 지우면 함께 삭제</td></tr>
+  </table>
+  <ul>
+    <li>이 데이터는 <strong>클라우드 백업·기기 이전으로도 나가지 않습니다</strong>(<code>allowBackup=false</code> + 백업 제외 규칙).</li>
+    <li>카메라로 비춘 화면이나 고른 사진은 <strong>저장하지 않습니다.</strong> 코드를 읽는 순간에만 기기 안에서 처리하고 버립니다.</li>
+  </ul>
+
+  <h2>3. 기기 밖으로 나가는 것 — 무엇이, 언제, 어디로</h2>
+  <table>
+    <tr><th>언제</th><th>무엇이 나가나</th><th>어디로</th><th>왜</th></tr>
+    <tr><td>단축 주소(bit.ly·han.gl 등)를 검사할 때</td><td>그 단축 주소</td><td><strong>단축 주소 서비스의 서버</strong></td><td>실제 목적지를 알기 위해 리디렉션만 따라갑니다. 페이지 내용은 받지 않고(HEAD 요청), 쿠키·리퍼러를 보내지 않습니다.</td></tr>
+    <tr><td>주소를 검사할 때 (구글 조회가 켜져 있는 경우)</td><td>검사하는 주소</td><td>Google Web Risk API</td><td>구글이 실시간으로 관리하는 위험 사이트 목록에 있는지 묻습니다. 널리 알려진 정상 도메인은 묻지 않습니다. 구글의 처리: <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud 개인정보 보호 고지</a></td></tr>
+    <tr><td>주소를 검사할 때</td><td>주소의 <strong>SHA-256 해시</strong>(주소 원문이 아님)</td><td>Firebase Firestore(개발자 프로젝트)</td><td>그 주소에 다른 사용자 신고가 몇 건 있는지 확인합니다. 해시라서 서버에서 원래 주소를 알 수 없습니다.</td></tr>
+    <tr><td><strong>사용자가 '피싱 신고하기'를 누른 경우에만</strong></td><td>신고한 주소·도메인·신고 사유·앱의 판정·신고 시각·익명 ID·(적었다면) 메모</td><td>Firebase Firestore(개발자 프로젝트)</td><td>검수 뒤 차단 목록에 반영하기 위해서입니다. 메모는 선택이며, 화면에서 개인정보를 적지 말라고 안내합니다.</td></tr>
+    <tr><td>앱 실행 시</td><td>설치별 <strong>익명 ID</strong>(Firebase 익명 인증이 만든 무작위 값)와 기기 무결성 토큰(Play Integrity / App Check)</td><td>Firebase</td><td>같은 사람이 같은 주소를 여러 번 신고해도 1건으로 세고, 변조된 앱의 요청을 거르기 위해서입니다. 이름·전화번호·이메일과 연결되지 않으며, 앱을 지우면 ID 가 바뀝니다.</td></tr>
+    <tr><td>앱 실행 시(12시간에 한 번)</td><td>앱 버전 등 설정 조회 요청</td><td>Firebase Remote Config</td><td>차단 목록 갱신 주소, 기능 스위치 같은 설정값을 내려받습니다. 개인정보를 보내지 않습니다.</td></tr>
+    <tr><td>광고를 표시할 때</td><td>광고 ID 등 기기 정보(Google 이 처리)</td><td>Google AdMob</td><td>4장 참고</td></tr>
+  </table>
+  <ul>
+    <li>검사 기록 전체·검사한 주소 목록은 <strong>서버로 보내지 않습니다.</strong> 위 표에 없는 전송은 없습니다.</li>
+    <li>구글 위험 목록 조회는 개발자가 원격으로 켜고 끕니다. 꺼져 있으면 해당 행의 전송은 일어나지 않습니다.</li>
+  </ul>
+
+  <h2>4. 광고</h2>
+  <p>이 앱은 Google AdMob 광고를 표시합니다.</p>
+  <ul>
+    <li>광고는 <strong>화면 하단 배너</strong>와 <strong>일부 화면 전환 시 전면 광고</strong>(세션·일일 상한 있음)로만 나옵니다.</li>
+    <li>설치 후 72시간 동안은 광고를 표시하지 않습니다.</li>
+    <li><strong>위험 판정 화면의 안전 기능(닫기·신고·3초 확인) 앞에는 광고를 두지 않습니다.</strong> 검사 횟수에 한도를 걸지 않으며, 광고를 봐야 검사할 수 있는 구조가 아닙니다.</li>
+    <li>앱 오픈 광고·종료 광고는 사용하지 않습니다.</li>
+    <li>AdMob 은 광고 제공을 위해 기기 광고 ID 등 일부 기기 정보를 처리할 수 있습니다. 자세한 내용은 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google 파트너 사이트 정책</a>을 참고하세요. 기기 설정 → Google → 광고에서 광고 ID 를 재설정하거나 맞춤 광고를 끌 수 있습니다.</li>
+  </ul>
+
+  <h2>5. 권한을 쓰는 이유</h2>
+  <table>
+    <tr><th>권한</th><th>쓰는 곳</th><th>안 주면</th></tr>
+    <tr><td>카메라</td><td>QR 코드를 읽을 때만. 화면은 저장·전송되지 않습니다</td><td>사진 선택·붙여넣기로 검사할 수 있습니다</td></tr>
+    <tr><td>인터넷</td><td>3장의 전송과 광고</td><td>주소 형태 검사·사칭 도메인 탐지·기기 안 차단 목록 검사는 인터넷 없이도 동작합니다</td></tr>
+  </table>
+  <ul>
+    <li>갤러리 사진은 안드로이드 <strong>시스템 사진 선택기</strong>로 고르므로 저장소·사진 읽기 권한을 요청하지 않습니다. 고른 사진은 코드를 읽는 데만 쓰고 저장하지 않습니다.</li>
+    <li>다른 앱(기본 카메라 앱 등)에서 '공유'로 넘겨 준 텍스트는 검사에만 쓰고, 검사 기록 외에는 남기지 않습니다.</li>
+  </ul>
+
+  <h2>6. 수집하지 않는 것</h2>
+  <ul>
+    <li>이름, 전화번호, 이메일, 주소, 생년월일 — <strong>입력란 자체가 없습니다.</strong></li>
+    <li>위치 정보, 연락처, 통화·문자 기록, 설치된 앱 목록.</li>
+    <li>분석·통계 SDK(Firebase Analytics 등)와 크래시 리포트 SDK 를 탑재하지 않습니다.</li>
+    <li>카메라 화면·사진 원본. 연락처·와이파이·결제 QR 을 읽어도 <strong>저장·접속·결제를 대행하지 않고</strong> 내용을 보여 주기만 합니다.</li>
+  </ul>
+
+  <h2>7. 보관 기간과 삭제</h2>
+  <ul>
+    <li>검사 기록: 기기 안에서 <strong>90일</strong> 뒤 자동 삭제. 기록 탭 → 모두 지우기로 즉시 삭제 가능.</li>
+    <li>신고 데이터: 검수와 차단 목록 유지에 필요한 기간 동안 개발자 프로젝트에 보관합니다. 신고에는 이름·연락처가 없으므로 개발자가 특정 사용자를 찾아낼 수 없습니다. 삭제를 원하시면 신고한 주소와 대략의 시각을 아래 이메일로 보내 주세요.</li>
+    <li>익명 ID: 앱을 삭제하거나 데이터를 지우면 새 값으로 바뀝니다.</li>
+  </ul>
+
+  <h2>8. 제3자 제공·국외 이전</h2>
+  <ul>
+    <li>3장에 적힌 전송은 모두 <strong>Google LLC</strong>(Firebase · Web Risk · AdMob)의 서비스로 갑니다. 이 서버는 국외(미국 등)에 있을 수 있습니다.</li>
+    <li>개발자는 수집한 정보를 판매하지 않으며, 위 서비스 제공 목적 외의 제3자에게 제공하지 않습니다.</li>
+    <li>차단 목록에는 <a href="https://www.data.go.kr" target="_blank" rel="noopener">공공데이터포털</a>에 공개된 한국인터넷진흥원(KISA) 피싱 사이트 URL 자료(공공누리 제1유형)를 보조 자료로 사용합니다. 이 자료는 앱에 포함된 것이며 사용자 정보와 무관합니다.</li>
+  </ul>
+
+  <h2>9. 아동</h2>
+  <p>이 앱은 만 14세 미만 아동을 대상으로 하지 않으며, 아동에게서 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+  <h2>10. 판정에 대한 안내</h2>
+  <p>검사 결과는 참고용이며 100% 안전을 보장하지 않습니다. 이 앱은 백신·안티바이러스가 아니며 악성 앱을 제거하지 않습니다. 개인정보나 금융정보를 입력하기 전에는 공식 앱에서 한 번 더 확인하세요.</p>
+
+  <h2>11. 문의</h2>
+  <p>이메일: <a href="mailto:smartdaitso@gmail.com">smartdaitso@gmail.com</a></p>
+
+  <h2>12. 개정 이력</h2>
+  <table>
+    <tr><th>날짜</th><th>내용</th></tr>
+    <tr><td>2026-09-15</td><td>최초 작성(v1.0.0 기준)</td></tr>
+  </table>
+
+  <footer>© 2026 스마트다있소 (SmartDaisso) · <a href="/ko.html">스마트다있소 홈</a></footer>
+</div>
+</body>
+</html>

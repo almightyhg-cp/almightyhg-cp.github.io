@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy — SafeScan</title>
+<meta name="description" content="Privacy policy for SafeScan, the app that checks a QR code or link for phishing risk before you open it." />
+<link rel="alternate" hreflang="en" href="https://almightyhg-cp.github.io/safescan/" />
+<link rel="alternate" hreflang="ko" href="https://almightyhg-cp.github.io/safescan/ko.html" />
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: #1f2328;
+    background: #ffffff;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  h2 { font-size: 1.2rem; margin: 32px 0 8px; padding-top: 8px; border-top: 1px solid #e5e7eb; }
+  h3 { font-size: 1.05rem; margin: 20px 0 6px; }
+  .eff { color: #6b7280; font-size: .95rem; margin: 0 0 20px; }
+  .lang { font-size: .95rem; margin: 0 0 12px; }
+  ul { padding-left: 20px; }
+  li { margin: 4px 0; }
+  a { color: #2563eb; word-break: break-word; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; font-size: .95rem; }
+  th, td { border: 1px solid #e5e7eb; padding: 8px 10px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; }
+  footer { margin-top: 40px; color: #6b7280; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0d1117; color: #e6edf3; }
+    h2 { border-top-color: #30363d; }
+    .eff, footer { color: #9198a1; }
+    a { color: #4493f8; }
+    th, td { border-color: #30363d; }
+    th { background: #161b22; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Privacy Policy — SafeScan</h1>
+  <p class="lang"><strong>English</strong> · <a href="ko.html">한국어</a></p>
+  <p class="eff"><strong>Effective: 15 September 2026</strong></p>
+
+  <p>App name: <strong>SafeScan</strong> (Korean: 세이프스캔) · Package: <code>com.almightyhg.safescan</code></p>
+
+  <h2>1. Summary</h2>
+  <p>SafeScan checks a QR code or link for phishing and malicious-app risk <strong>before you open it</strong>. There is no account, no sign-in and no field for your name or phone number. Your check history stays <strong>on your device only</strong> and is deleted automatically after 90 days.</p>
+  <p>Checking a link does, however, mean that <strong>the address you are checking sometimes has to leave the device</strong> (to resolve a short link, to ask Google's unsafe-site list, or when you tap Report yourself). Section 3 lists exactly what goes where. Nothing else leaves the device.</p>
+
+  <h2>2. Stored on your device only</h2>
+  <table>
+    <tr><th>Item</th><th>Contents</th><th>Where</th><th>Deletion</th></tr>
+    <tr><td>Check history</td><td>The address checked, the verdict, the evidence and the time</td><td>Device storage (SQLite)</td><td><strong>Deleted automatically after 90 days.</strong> You can delete everything at any time from the History tab</td></tr>
+    <tr><td>Report queue</td><td>A report you tapped while offline, held until it can be sent</td><td>Device storage</td><td>Deleted once sent</td></tr>
+    <tr><td>Settings</td><td>Ad grace-period start, launch count (for the review prompt), blocklist refresh time</td><td>Device storage</td><td>Deleted with the app</td></tr>
+  </table>
+  <ul>
+    <li>This data is also <strong>excluded from cloud backup and device transfer</strong> (<code>allowBackup=false</code> plus backup exclusion rules).</li>
+    <li>Camera frames and pictures you pick are <strong>never stored.</strong> They are processed on the device only for the moment it takes to read the code, then discarded.</li>
+  </ul>
+
+  <h2>3. What leaves the device — what, when, and where</h2>
+  <table>
+    <tr><th>When</th><th>What is sent</th><th>To</th><th>Why</th></tr>
+    <tr><td>When you check a short link (bit.ly, han.gl, …)</td><td>That short link</td><td><strong>The short-link service's server</strong></td><td>To find the real destination the app follows redirects only. It does not fetch page content (HEAD request) and sends no cookies or referrer.</td></tr>
+    <tr><td>When you check an address (if Google lookup is enabled)</td><td>The address being checked</td><td>Google Web Risk API</td><td>Asks whether the address is on Google's real-time list of unsafe sites. Well-known legitimate domains are not sent. Google's handling: <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud Privacy Notice</a></td></tr>
+    <tr><td>When you check an address</td><td>A <strong>SHA-256 hash</strong> of the address (not the address itself)</td><td>Firebase Firestore (the developer's project)</td><td>To see how many other users have reported that address. Because it is a hash, the server cannot recover the original address.</td></tr>
+    <tr><td><strong>Only when you tap "Report phishing"</strong></td><td>The reported address, its domain, the reason you chose, the app's verdict, the time, your anonymous ID and (if you wrote one) your note</td><td>Firebase Firestore (the developer's project)</td><td>So that, after review, the address can be added to the blocklist. The note is optional and the screen asks you not to include personal details.</td></tr>
+    <tr><td>On launch</td><td>A per-installation <strong>anonymous ID</strong> (a random value created by Firebase Anonymous Authentication) and a device-integrity token (Play Integrity / App Check)</td><td>Firebase</td><td>So that the same person reporting the same address several times counts once, and so that requests from tampered apps can be rejected. The ID is not linked to a name, phone number or email, and changes if you uninstall the app.</td></tr>
+    <tr><td>On launch (at most every 12 hours)</td><td>A settings request including the app version</td><td>Firebase Remote Config</td><td>To download settings such as the blocklist update URL and feature switches. No personal data is sent.</td></tr>
+    <tr><td>When an ad is shown</td><td>Device information such as the advertising ID (processed by Google)</td><td>Google AdMob</td><td>See section 4</td></tr>
+  </table>
+  <ul>
+    <li>Your check history and the list of addresses you have checked are <strong>never uploaded.</strong> There is no transfer beyond this table.</li>
+    <li>The Google unsafe-site lookup is switched on and off remotely by the developer. When it is off, that row does not happen.</li>
+  </ul>
+
+  <h2>4. Advertising</h2>
+  <p>This app shows Google AdMob ads.</p>
+  <ul>
+    <li>Ads appear only as a <strong>banner at the bottom of the screen</strong> and as an <strong>interstitial on some screen transitions</strong> (with per-session and daily caps).</li>
+    <li>No ads are shown during the first 72 hours after installation.</li>
+    <li><strong>No ad is ever placed in front of a safety action on the verdict screen (Close, Report, the 3-second confirmation).</strong> There is no limit on the number of checks, and you never have to watch an ad to run a check.</li>
+    <li>App open ads and exit ads are not used.</li>
+    <li>AdMob may process some device information, such as the advertising ID, in order to serve ads. See the <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google partner sites policy</a>. You can reset your advertising ID or opt out of ad personalisation under Settings → Google → Ads on your device.</li>
+  </ul>
+
+  <h2>5. Why permissions are used</h2>
+  <table>
+    <tr><th>Permission</th><th>Used for</th><th>If you decline</th></tr>
+    <tr><td>Camera</td><td>Reading QR codes only. Frames are never stored or transmitted</td><td>You can still check from a photo or by pasting</td></tr>
+    <tr><td>Internet</td><td>The transfers in section 3, and ads</td><td>Address-pattern checks, look-alike domain detection and the on-device blocklist keep working offline</td></tr>
+  </table>
+  <ul>
+    <li>Pictures are chosen through the Android <strong>system photo picker</strong>, so no storage or media-read permission is requested. A picked picture is used only to read the code and is not stored.</li>
+    <li>Text handed over from another app via Share (for example the stock camera app) is used only for the check and is kept only as part of the check history.</li>
+  </ul>
+
+  <h2>6. What is never collected</h2>
+  <ul>
+    <li>Name, phone number, email, address, date of birth — <strong>there is no input field for any of these.</strong></li>
+    <li>Location, contacts, call or SMS logs, list of installed apps.</li>
+    <li>No analytics SDK (such as Firebase Analytics) and no crash-reporting SDK is bundled.</li>
+    <li>Camera frames or original pictures. When a contact, Wi-Fi or payment QR is read, the app <strong>does not save, connect or pay on your behalf</strong> — it only shows you what the code contains.</li>
+  </ul>
+
+  <h2>7. Retention and deletion</h2>
+  <ul>
+    <li>Check history: deleted automatically after <strong>90 days</strong> on the device. Delete immediately via History tab → Delete all.</li>
+    <li>Report data: kept in the developer's project for as long as needed for review and blocklist maintenance. Reports carry no name or contact details, so the developer cannot identify an individual user. To request deletion, email the reported address and the approximate time to the address below.</li>
+    <li>Anonymous ID: replaced with a new value when you uninstall the app or clear its data.</li>
+  </ul>
+
+  <h2>8. Third parties and international transfer</h2>
+  <ul>
+    <li>All transfers listed in section 3 go to services operated by <strong>Google LLC</strong> (Firebase · Web Risk · AdMob). Those servers may be located outside your country (for example in the United States).</li>
+    <li>The developer does not sell collected information and does not share it with third parties beyond the services above.</li>
+    <li>The blocklist includes, as a supplementary source, the phishing-site URL dataset published by the Korea Internet &amp; Security Agency (KISA) on the <a href="https://www.data.go.kr" target="_blank" rel="noopener">Korean Open Government Data Portal</a> (KOGL Type 1). This dataset ships inside the app and contains no user data.</li>
+  </ul>
+
+  <h2>9. Children</h2>
+  <p>This app is not directed at children under 13 (under 14 in Korea) and does not knowingly collect personal information from children.</p>
+
+  <h2>10. About the verdicts</h2>
+  <p>Check results are for reference only and do not guarantee 100% safety. SafeScan is not an antivirus and does not remove malicious apps. Before entering personal or financial information, double-check in the official app.</p>
+
+  <h2>11. Contact</h2>
+  <p>Email: <a href="mailto:smartdaitso@gmail.com">smartdaitso@gmail.com</a></p>
+
+  <h2>12. Revision history</h2>
+  <table>
+    <tr><th>Date</th><th>Change</th></tr>
+    <tr><td>2026-09-15</td><td>First version (for v1.0.0)</td></tr>
+  </table>
+
+  <footer>© 2026 SmartDaisso (스마트다있소) · <a href="/">SmartDaisso home</a></footer>
+</div>
+</body>
+</html>
