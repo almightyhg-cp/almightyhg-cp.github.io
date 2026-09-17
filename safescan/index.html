@@ -44,18 +44,19 @@
 <div class="wrap">
   <h1>Privacy Policy — SafeScan</h1>
   <p class="lang"><strong>English</strong> · <a href="ko.html">한국어</a></p>
-  <p class="eff"><strong>Effective: 15 September 2026</strong></p>
+  <p class="eff"><strong>Effective: 18 September 2026</strong> (first effective 15 September 2026)</p>
 
   <p>App name: <strong>SafeScan</strong> (Korean: 세이프스캔) · Package: <code>com.almightyhg.safescan</code></p>
 
   <h2>1. Summary</h2>
-  <p>SafeScan checks a QR code or link for phishing and malicious-app risk <strong>before you open it</strong>. There is no account, no sign-in and no field for your name or phone number. Your check history stays <strong>on your device only</strong> and is deleted automatically after 90 days.</p>
+  <p>SafeScan checks a QR code or link for phishing and malicious-app risk <strong>before you open it</strong>. There is no account, no sign-in and no field for your name or phone number. Your check history stays <strong>on your device only</strong> and is deleted automatically after 90 days. Codes you <strong>save yourself</strong> (Favorites and QR Books) stay until you delete them — the app must not quietly erase what you collected on purpose.</p>
   <p>Checking a link does, however, mean that <strong>the address you are checking sometimes has to leave the device</strong> (to resolve a short link, to ask Google's unsafe-site list, or when you tap Report yourself). Section 3 lists exactly what goes where. Nothing else leaves the device.</p>
 
   <h2>2. Stored on your device only</h2>
   <table>
     <tr><th>Item</th><th>Contents</th><th>Where</th><th>Deletion</th></tr>
     <tr><td>Check history</td><td>The address checked, the verdict, the evidence and the time</td><td>Device storage (SQLite)</td><td><strong>Deleted automatically after 90 days.</strong> You can delete everything at any time from the History tab</td></tr>
+    <tr><td><strong>Saved codes (Favorites and QR Books)</strong></td><td>Addresses and codes you chose to save, the name and note you added, which book they are in and when it was created, and the time they were last re-checked</td><td>Device storage (SQLite)</td><td><strong>Never deleted automatically.</strong> Remove them one by one, by book, or with [Empty this list] under Library → QR Books. Deleted with the app</td></tr>
     <tr><td>Report queue</td><td>A report you tapped while offline, held until it can be sent</td><td>Device storage</td><td>Deleted once sent</td></tr>
     <tr><td>Settings</td><td>Ad grace-period start, launch count (for the review prompt), blocklist refresh time</td><td>Device storage</td><td>Deleted with the app</td></tr>
   </table>
@@ -111,7 +112,8 @@
 
   <h2>7. Retention and deletion</h2>
   <ul>
-    <li>Check history: deleted automatically after <strong>90 days</strong> on the device. Delete immediately via History tab → Delete all.</li>
+    <li>Check history: deleted automatically after <strong>90 days</strong> on the device. Delete immediately via Library → History → Delete all.</li>
+    <li>Saved codes (Favorites and QR Books): <strong>no expiry.</strong> You collected them on purpose, so the app never deletes them for you. Remove them at any time under Library → QR Books — one item, a whole book, or [Empty this list] — and they go with the app when you uninstall it. This data is never sent to a server either.</li>
     <li>Report data: kept in the developer's project for as long as needed for review and blocklist maintenance. Reports carry no name or contact details, so the developer cannot identify an individual user. To request deletion, email the reported address and the approximate time to the address below.</li>
     <li>Anonymous ID: replaced with a new value when you uninstall the app or clear its data.</li>
   </ul>
@@ -136,6 +138,7 @@
   <table>
     <tr><th>Date</th><th>Change</th></tr>
     <tr><td>2026-09-15</td><td>First version (for v1.0.0)</td></tr>
+    <tr><td>2026-09-18</td><td>Added Favorites and QR Books (v1.1.0). Sections 2 and 7 now state that codes you save yourself are never deleted automatically. Nothing new leaves the device</td></tr>
   </table>
 
   <footer>© 2026 SmartDaisso (스마트다있소) · <a href="/">SmartDaisso home</a></footer>
