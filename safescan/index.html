@@ -44,7 +44,7 @@
 <div class="wrap">
   <h1>Privacy Policy — SafeScan</h1>
   <p class="lang"><strong>English</strong> · <a href="ko.html">한국어</a></p>
-  <p class="eff"><strong>Effective: 18 September 2026</strong> (first effective 15 September 2026)</p>
+  <p class="eff"><strong>Effective: 1 October 2026</strong> (first effective 15 September 2026)</p>
 
   <p>App name: <strong>SafeScan</strong> (Korean: 세이프스캔) · Package: <code>com.almightyhg.safescan</code></p>
 
@@ -71,6 +71,7 @@
     <tr><td>When you check a short link (bit.ly, han.gl, …)</td><td>That short link</td><td><strong>The short-link service's server</strong></td><td>To find the real destination the app follows redirects only. It does not fetch page content (HEAD request) and sends no cookies or referrer.</td></tr>
     <tr><td>When you check an address (if Google lookup is enabled)</td><td>The address being checked</td><td>Google Web Risk API</td><td>Asks whether the address is on Google's real-time list of unsafe sites. Well-known legitimate domains are not sent. Google's handling: <a href="https://cloud.google.com/terms/cloud-privacy-notice" target="_blank" rel="noopener">Google Cloud Privacy Notice</a></td></tr>
     <tr><td>When you check an address</td><td>A <strong>SHA-256 hash</strong> of the address (not the address itself)</td><td>Firebase Firestore (the developer's project)</td><td>To see how many other users have reported that address. Because it is a hash, the server cannot recover the original address.</td></tr>
+    <tr><td>When a Google lookup is made</td><td>Monthly <strong>lookup counts</strong> and a <strong>count</strong> of response types (success, denied, quota exceeded, failed), with your anonymous ID — no addresses, domains or results are sent</td><td>Firebase Firestore (the developer's project, one document per anonymous ID)</td><td>To notice before the free Google lookup quota (100,000 per month) runs out and to detect lookups being refused. It is never used to limit how many checks you can run.</td></tr>
     <tr><td><strong>Only when you tap "Report phishing"</strong></td><td>The reported address, its domain, the reason you chose, the app's verdict, the time, your anonymous ID and (if you wrote one) your note</td><td>Firebase Firestore (the developer's project)</td><td>So that, after review, the address can be added to the blocklist. The note is optional and the screen asks you not to include personal details.</td></tr>
     <tr><td>On launch</td><td>A per-installation <strong>anonymous ID</strong> (a random value created by Firebase Anonymous Authentication) and a device-integrity token (Play Integrity / App Check)</td><td>Firebase</td><td>So that the same person reporting the same address several times counts once, and so that requests from tampered apps can be rejected. The ID is not linked to a name, phone number or email, and changes if you uninstall the app.</td></tr>
     <tr><td>On launch (at most every 12 hours)</td><td>A settings request including the app version</td><td>Firebase Remote Config</td><td>To download settings such as the blocklist update URL and feature switches. No personal data is sent.</td></tr>
@@ -139,6 +140,7 @@
     <tr><th>Date</th><th>Change</th></tr>
     <tr><td>2026-09-15</td><td>First version (for v1.0.0)</td></tr>
     <tr><td>2026-09-18</td><td>Added Favorites and QR Books (v1.1.0). Sections 2 and 7 now state that codes you save yourself are never deleted automatically. Nothing new leaves the device</td></tr>
+    <tr><td>2026-10-01</td><td>Section 3 now lists Google lookup usage counts (monthly numbers and response types, stored per anonymous ID). No addresses or results are sent</td></tr>
   </table>
 
   <footer>© 2026 SmartDaisso (스마트다있소) · <a href="/">SmartDaisso home</a></footer>
