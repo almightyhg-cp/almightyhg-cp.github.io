@@ -42,7 +42,7 @@
 <div class="wrap">
   <h1>Privacy Policy — My Home Lab</h1>
   <p class="lang"><strong>English</strong> · <a href="ko.html">한국어</a></p>
-  <p class="eff"><strong>Effective: 10 September 2026</strong></p>
+  <p class="eff"><strong>Effective: 19 October 2026</strong></p>
 
   <p>App name: <strong>My Home Lab</strong> (Korean: 우리집실험실) · Package: <code>com.almightyhg.kids_science_lab</code></p>
 
@@ -83,22 +83,29 @@
     <li>No ads are shown during the first 72 hours after installation.</li>
     <li>App open ads, exit ads and rewarded ads are not used.</li>
     <li>In line with the Google Play Families policy, ad requests are tagged for <strong>child treatment</strong> with a <strong>content rating of G</strong>, and <strong>personalised advertising is not used</strong>.</li>
-    <li>AdMob may process some device information, such as the advertising ID, in order to serve ads. See the <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google partner sites policy</a> for details.</li>
+    <li>The Google advertising SDK inside the app <strong>automatically collects the following and sends it to Google</strong> for advertising, analytics and fraud prevention (encrypted in transit). Turning off personalised ads and applying child treatment does not stop this collection.
+      <ul>
+        <li><strong>Approximate location</strong> — estimated from the IP address (precise location such as GPS is not used)</li>
+        <li><strong>App interactions</strong> — ad-related usage such as ad views and taps</li>
+        <li><strong>Diagnostics</strong> — app and SDK performance information</li>
+        <li><strong>Device identifiers</strong> — advertising ID and app set ID</li>
+      </ul>
+      See the <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google partner sites policy</a> for details.</li>
     <li>Users in the European Economic Area and the United Kingdom see an ad consent dialog (a Google-certified CMP) on first launch, and can change that choice at any time under <strong>Settings → Ad privacy settings</strong>.</li>
   </ul>
 
   <h2>5. What is never collected</h2>
   <ul>
     <li>Name, age, date of birth, school, address, phone number, email — <strong>there is no input field for any of these.</strong></li>
-    <li>Location, contacts, call logs, list of installed apps.</li>
-    <li>No analytics SDK (such as Firebase Analytics) is bundled.</li>
+    <li>Precise location (GPS), contacts, call logs, list of installed apps — the app does not request permission to read any of these. (Approximate location is processed from the IP address by the advertising SDK described in section 4; the developer does not receive location data.)</li>
+    <li>No analytics SDK (such as Firebase Analytics) is bundled. The app interaction and diagnostics data in section 4 is handled by the advertising SDK and does not reach the developer.</li>
     <li>A shared journal card contains only the photo, the experiment name, the sentence you wrote and the app name. There is no field for a name or a school, so a child's personal information has no route onto the card.</li>
   </ul>
 
   <h2>6. Third parties and international transfer</h2>
   <ul>
     <li>The developer collects no user data, so there is no data to share with third parties.</li>
-    <li>Device information processed by Google AdMob while serving ads is governed by Google's policies.</li>
+    <li>The data the Google advertising SDK collects and sends to Google (including servers outside Korea) while serving ads — approximate location, app interactions, diagnostics and device identifiers (section 4) — is governed by Google's policies.</li>
   </ul>
 
   <h2>7. Protection of children</h2>
@@ -117,6 +124,7 @@
     <tr><th>Date</th><th>Change</th></tr>
     <tr><td>2026-09-03</td><td>First version (for v0.1.0)</td></tr>
     <tr><td>2026-09-10</td><td>Final app name applied (working title "Kids Science Lab" → My Home Lab / 우리집실험실) · English edition added</td></tr>
+    <tr><td>2026-10-19</td><td>Section 4 now lists the four data types the advertising SDK collects automatically (approximate location, app interactions, diagnostics, device identifiers) · section 5 "location is never collected" corrected to "precise location" (matches the Google Play Data safety answers)</td></tr>
   </table>
 
   <footer>© 2026 SmartDaisso (스마트다있소) · <a href="/">SmartDaisso home</a></footer>
