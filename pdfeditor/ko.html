@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>개인정보처리방침 – 만능 PDF 편집기</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1d2330; --muted:#5b6475; --line:#e3e7ee; --accent:#2f5bd3; --box:#f4f6fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#12151b; --fg:#e7eaf0; --muted:#a3abba; --line:#2a303b; --accent:#8fb0ff; --box:#1b2029; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", Roboto, sans-serif;
+         word-break: keep-all; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.6rem; line-height: 1.3; margin: 0 0 4px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--line); }
+  p, li { overflow-wrap: anywhere; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 4px 0; }
+  a { color: var(--accent); }
+  code { background: var(--box); padding: 1px 5px; border-radius: 4px; font-size: .92em; }
+  .meta { color: var(--muted); margin: 0 0 20px; }
+  .summary { background: var(--box); border-radius: 10px; padding: 14px 18px; }
+  .summary ul { margin: 6px 0 0; }
+  .lang { float: right; font-size: .9rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--line); }
+  .table-wrap { overflow-x: auto; }
+</style>
+</head>
+<body>
+<main>
+  <a class="lang" href="index.html">English</a>
+  <h1>개인정보처리방침</h1>
+  <p class="meta">만능 PDF 편집기 (All-in-One PDF Editor) · 패키지 <code>com.almightyhg.pdfeditor</code><br>
+  개발자: almightyhg · 시행일: 2026년 10월 20일</p>
+
+  <div class="summary">
+    <strong>요약</strong>
+    <ul>
+      <li>문서와 이미지는 <strong>내 기기 안에서만</strong> 열고, 편집하고, 변환합니다. 앱이 문서를 서버로 올리지 않습니다.</li>
+      <li>회원가입·로그인·분석 도구(SDK)가 없으며, 개발자는 개인정보를 수집하지 않습니다.</li>
+      <li>앱은 <strong>Google AdMob</strong> 광고를 표시하며, AdMob은 아래와 같이 기기 식별자 등을 수집할 수 있습니다.</li>
+      <li>그 밖의 인터넷 통신은 사용자가 요청할 때 추가 글꼴 파일을 내려받는 것뿐입니다.</li>
+    </ul>
+  </div>
+
+  <h2>1. 파일 처리 방식</h2>
+  <ul>
+    <li>파일 선택, '다른 앱으로 열기', '공유'로 PDF나 이미지를 열면 앱은 작업을 위해 그 파일을 기기 안의 앱 전용 저장공간에 복사합니다. 화면 표시, 글자 넣기, 서명·도장, 페이지 편집, 변환은 모두 기기 안에서 처리됩니다.</li>
+    <li>결과물은 항상 <strong>새 파일</strong>로 휴대폰 공용 저장공간의 <code>Download/my_pdf</code> 폴더에 저장됩니다(이미지 변환·나누기 결과는 <code>Download/my_pdf/&lt;문서명&gt;/</code> 같은 하위 폴더). 원본 파일은 바꾸지 않습니다.</li>
+    <li>파일이 기기 밖으로 나가는 경우는 <strong>사용자가 직접</strong> 안드로이드 공유·열기 메뉴로 다른 앱에 보낼 때뿐이며, 그 이후는 사용자가 고른 앱의 정책을 따릅니다.</li>
+  </ul>
+
+  <h2>2. 기기 안에 저장되는 정보</h2>
+  <p>아래 정보는 기기의 앱 전용 저장공간에만 보관되며 개발자나 제3자에게 전송되지 않습니다.</p>
+  <ul>
+    <li><strong>작업용 사본</strong>: 편집 중인 문서의 임시 사본(필요 없어지면 정리).</li>
+    <li><strong>미저장 편집 백업</strong>: 저장하지 않은 변경이 있는 동안, 앱이 갑자기 종료돼도 되살릴 수 있도록 편집 내용(입력한 글자, 서명·도장·그림 위치, 현재 페이지)을 기록합니다. 저장하거나 문서를 닫으면 삭제됩니다.</li>
+    <li><strong>서명·도장</strong>: 사용자가 만들거나 불러온 서명·도장 이미지(재사용용).</li>
+    <li><strong>내려받은 글꼴</strong>: 사용자가 설치한 글꼴 파일.</li>
+    <li><strong>최근 결과물 목록</strong>(파일 이름과 위치, 최대 50개)과 이미지 형식·화질, 앱 언어 같은 설정.</li>
+  </ul>
+  <p>이 앱은 안드로이드 클라우드 백업을 사용하지 않으므로 위 정보가 Google 계정 백업으로 복사되지 않습니다.</p>
+
+  <h2>3. 개발자가 수집하는 정보</h2>
+  <p>없습니다. 개발자는 이 앱을 위한 서버를 운영하지 않으며, 문서·서명·도장·입력한 글자·연락처·위치 등 어떤 개인정보도 받지 않습니다. 분석·오류 보고 SDK도 포함하지 않습니다.</p>
+
+  <h2>4. 광고 – Google AdMob 및 동의(UMP)</h2>
+  <p>앱은 Google LLC의 Google AdMob 광고를 표시합니다. 광고 제공·측정과 부정행위 방지를 위해 Google 모바일 광고 SDK가 다음 정보를 수집·처리할 수 있습니다.</p>
+  <ul>
+    <li>안드로이드 광고 ID(및 앱 세트 ID) 등 기기 식별자</li>
+    <li>IP 주소(대략적인 위치 추정에 쓰일 수 있음)</li>
+    <li>기기·앱 정보(기기 모델, OS 버전, 언어, 앱 버전 등)</li>
+    <li>광고 노출·클릭 등 광고와 관련된 앱 이용 정보 및 광고 성능 진단 정보</li>
+  </ul>
+  <p>이 정보는 개발자가 아니라 Google이 수집하며, 사용자의 문서와 연결되지 않습니다. 유럽경제지역(EEA)·영국·스위스 사용자에게는 동의 화면(Google User Messaging Platform)이 표시되어 맞춤 광고 허용 여부를 고를 수 있고, 나중에 앱에서 변경할 수 있습니다. 또한 기기의 안드로이드 설정(설정 › 개인정보 보호 › 광고, 또는 Google › 광고)에서 광고 ID를 재설정·삭제하거나 맞춤 광고를 끌 수 있습니다.</p>
+  <p>Google이 파트너 앱의 정보를 사용하는 방식: <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">https://policies.google.com/technologies/partner-sites</a> · Google 개인정보처리방침: <a href="https://policies.google.com/privacy" rel="noopener">https://policies.google.com/privacy</a></p>
+
+  <h2>5. 글꼴 내려받기</h2>
+  <p>한국어·영문 글꼴은 앱에 내장되어 있습니다. 사용자가 추가 글꼴(유럽 라틴 문자 – Noto Sans, 일본어 – BIZ UDPGothic, 번체 중국어 – Chocolate Classical Sans)을 내려받기로 하면, 앱은 <strong><code>raw.githubusercontent.com</code></strong>(GitHub에 공개된 Google Fonts 저장소)에서 글꼴 파일을 받습니다. 이 요청에는 문서 내용이나 앱이 가진 개인정보가 포함되지 않으며, 일반적인 웹 요청과 마찬가지로 서버는 IP 주소와 기본 접속 정보를 받게 됩니다. GitHub 개인정보 처리방침: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a></p>
+  <p>'출처 보기' 버튼은 웹 브라우저에서 fonts.google.com의 해당 글꼴 페이지를 엽니다. 기기에 있는 TTF 파일을 직접 골라 설치할 수도 있으며, 이때는 인터넷을 쓰지 않습니다.</p>
+
+  <h2>6. 사용하는 권한</h2>
+  <div class="table-wrap">
+  <table>
+    <tr><th>권한</th><th>용도</th></tr>
+    <tr><td>인터넷 (<code>INTERNET</code>)</td><td>추가 글꼴 내려받기, 광고 불러오기</td></tr>
+    <tr><td>네트워크 상태, 광고 ID (<code>ACCESS_NETWORK_STATE</code>, <code>AD_ID</code>)</td><td>Google 모바일 광고 SDK가 광고 제공을 위해 추가</td></tr>
+    <tr><td>광고 서비스·백그라운드 작업 (<code>ACCESS_ADSERVICES_*</code>, <code>WAKE_LOCK</code>, <code>FOREGROUND_SERVICE</code>)</td><td>역시 Google 모바일 광고 SDK가 추가(안드로이드 개인정보 보호 샌드박스 광고 기능·SDK 자체 백그라운드 작업). 앱 자체는 쓰지 않습니다.</td></tr>
+  </table>
+  </div>
+  <p>저장공간·카메라·연락처·위치 권한은 요청하지 <strong>않습니다</strong>. 파일은 안드로이드 파일 선택기·사진 선택기나 '열기'·'공유'를 통해 사용자가 고른 파일에만 접근하며, 결과물은 시스템 미디어 저장소를 통해 <code>Download/my_pdf</code>에 저장합니다(Android 10 이상에서는 권한 불필요).</p>
+
+  <h2>7. 아동</h2>
+  <p>이 앱은 일반 문서 도구로, 만 13세 미만 아동을 대상으로 하지 않습니다. 아동의 개인정보를 고의로 수집하지 않습니다.</p>
+
+  <h2>8. 보관 및 삭제</h2>
+  <ul>
+    <li>앱을 삭제하거나(또는 설정 › 애플리케이션 › 만능 PDF 편집기 › 저장공간 › 데이터 삭제) 하면 앱 전용 저장공간의 모든 정보(작업용 사본, 미저장 편집 백업, 서명·도장, 글꼴, 최근 결과물 목록, 설정)가 삭제됩니다.</li>
+    <li><code>Download/my_pdf</code>에 저장한 파일은 사용자의 파일이므로 앱을 삭제해도 <strong>남아 있습니다</strong>. 필요 없으면 파일 관리자 앱에서 지워 주세요. 앱의 '목록 지우기'는 목록만 지우고 파일은 지우지 않습니다.</li>
+    <li>광고를 위해 Google이 수집한 정보는 Google 정책에 따라 보관되며, 안드로이드 설정에서 광고 ID를 재설정할 수 있습니다.</li>
+  </ul>
+
+  <h2>9. 보안</h2>
+  <p>글꼴은 HTTPS로 내려받고, 설치 전에 SHA-256 체크섬으로 파일이 맞는지 확인합니다. 앱은 문서를 전송하지 않습니다.</p>
+
+  <h2>10. 문의</h2>
+  <p>이 방침에 관한 문의·요청: <a href="mailto:smartdaitso@gmail.com">smartdaitso@gmail.com</a></p>
+
+  <h2>11. 방침 변경</h2>
+  <p>앱의 정보 처리 방식이 바뀌면 이 페이지를 수정하고 위 시행일을 갱신합니다. 중요한 변경은 앱 업데이트 안내에도 적습니다.</p>
+</main>
+</body>
+</html>
