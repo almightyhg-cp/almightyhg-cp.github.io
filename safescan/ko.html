@@ -44,7 +44,7 @@
 <div class="wrap">
   <h1>개인정보처리방침 — 세이프스캔</h1>
   <p class="lang"><a href="index.html">English</a> · <strong>한국어</strong></p>
-  <p class="eff"><strong>시행일: 2026년 10월 20일</strong> (최초 시행 2026년 9월 15일)</p>
+  <p class="eff"><strong>시행일: 2026년 11월 2일</strong> (최초 시행 2026년 9월 15일)</p>
 
   <p>앱 이름: <strong>세이프스캔</strong> (English: SafeScan) · 패키지: <code>com.almightyhg.safescan</code></p>
 
@@ -75,6 +75,7 @@
     <tr><td><strong>사용자가 '피싱 신고하기'를 누른 경우에만</strong></td><td>신고한 주소·도메인·신고 사유·앱의 판정·신고 시각·익명 ID·(적었다면) 메모</td><td>Firebase Firestore(개발자 프로젝트)</td><td>검수 뒤 차단 목록에 반영하기 위해서입니다. 메모는 선택이며, 화면에서 개인정보를 적지 말라고 안내합니다.</td></tr>
     <tr><td>앱 실행 시</td><td>설치별 <strong>익명 ID</strong>(Firebase 익명 인증이 만든 무작위 값)와 기기 무결성 토큰(Play Integrity / App Check)</td><td>Firebase</td><td>같은 사람이 같은 주소를 여러 번 신고해도 1건으로 세고, 변조된 앱의 요청을 거르기 위해서입니다. 이름·전화번호·이메일과 연결되지 않으며, 앱을 지우면 ID 가 바뀝니다. 이 요청을 처리하면서 Firebase 는 기기의 <strong>IP 주소</strong>를 받습니다(인터넷 통신의 특성상 피할 수 없음). 개발자는 IP 주소를 저장하지 않습니다.</td></tr>
     <tr><td>앱 실행 시(12시간에 한 번)</td><td>앱 버전 등 설정 조회 요청</td><td>Firebase Remote Config</td><td>차단 목록 갱신 주소, 기능 스위치 같은 설정값을 내려받습니다. 개인정보를 보내지 않습니다.</td></tr>
+    <tr><td>앱이 정한 조건(실행 횟수 등)을 채워 리뷰 요청 창을 띄울 때</td><td>리뷰 창 표시 요청(앱이 직접 보내는 개인정보는 없음)</td><td>Google Play(인앱 리뷰)</td><td>별점·리뷰 창을 띄우기 위해서입니다. 창은 Google Play 가 표시하며, 작성한 리뷰는 Google Play 정책에 따라 처리됩니다.</td></tr>
     <tr><td>광고를 표시할 때</td><td>광고 ID 등 기기 정보(Google 이 처리)</td><td>Google AdMob</td><td>4장 참고</td></tr>
   </table>
   <ul>
@@ -149,6 +150,7 @@
     <tr><td>2026-09-18</td><td>즐겨찾기·QR북 추가(v1.1.0). 사용자가 직접 저장한 코드는 자동 삭제되지 않는다는 점을 2장·7장에 명시. 전송되는 항목은 바뀌지 않음</td></tr>
     <tr><td>2026-10-01</td><td>3장에 구글 조회 횟수 집계(월별 숫자·응답 결과 분류, 익명 ID 문서) 추가. 주소·판정은 보내지 않음</td></tr>
     <tr><td>2026-10-20</td><td>광고 SDK 가 자동 수집하는 4가지(대략적인 위치·앱 상호작용·진단·기기 식별자)를 4장에 명시 · 6장 "위치 정보 수집 안 함"을 "정확한 위치"로 바로잡음 · 3장 Firebase 의 IP 주소 수신과 단축 주소 GET 재시도를 명시(Play 데이터 보안 답변·실제 동작과 일치). 앱 동작은 바뀌지 않음</td></tr>
+    <tr><td>2026-11-02</td><td>3장에 Google Play 인앱 리뷰 창 요청을 추가(실제 동작과 일치). 앱 동작은 바뀌지 않음</td></tr>
   </table>
 
   <footer>© 2026 스마트다있소 (SmartDaisso) · <a href="/ko.html">스마트다있소 홈</a></footer>

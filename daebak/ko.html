@@ -13,25 +13,41 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 </head>
 <body>
 <h1>대박 일기(Daebak) — 개인정보처리방침</h1>
-<p class="small">시행일: 2026-08-25 · <a href="index.html">English</a></p>
+<p class="small">시행일: 2026-11-02 · <a href="index.html">English</a></p>
 
 <p>"대박 일기"(이하 "앱")는 계정·회원가입 없이 동작합니다. 사용자가 작성한 일기와 모든
-콘텐츠는 <b>사용자 기기에만</b> 저장됩니다. 개발자는 개인정보를 수집·보관하는 서버를
-운영하지 않습니다.</p>
+콘텐츠는 <b>사용자 기기에</b> 저장됩니다. 개발자는 개인정보를 수집·보관하는 서버를
+운영하지 않습니다. 다만 AI 기능을 사용하면 아래 표와 같이 일기·대화의 일부 또는 전부가
+Google 의 AI 로 전송됩니다.</p>
 
 <h2>1. 수집하는 정보</h2>
 <p>개발자는 <b>개인정보를 수집·저장하지 않습니다</b>. 다만 아래 기능을 사용할 때
 해당 데이터가 외부 서비스로 전송되어 처리됩니다.</p>
 <table>
 <tr><th>기능</th><th>전송 데이터</th><th>수신자</th><th>목적</th></tr>
-<tr><td>AI 첨삭·힌트·대화</td><td>일기 본문(프라이버시 모드 시 요약만)</td><td>Google (Firebase AI Logic / Gemini API)</td><td>첨삭·힌트·대화 생성</td></tr>
+<tr><td>AI 첨삭</td><td>작성한 한국어 일기 원문 전체</td><td>Google (Firebase AI Logic / Gemini API)</td><td>첨삭 결과 생성</td></tr>
+<tr><td>첨삭 직후 자동 처리</td><td>첨삭된 일기 전체</td><td>Google (Firebase AI Logic / Gemini API)</td><td>① 다음 대화에 쓸 장기 기억용 사실 추출(인물 이름·장소·취미·목표·일과·반려동물·직장 등 최대 5건, 결과는 기기의 "AI 기억"에 저장) ② 오늘의 사진 검색어 추출과 감정 분류(6가지 중 하나)</td></tr>
+<tr><td>힌트</td><td>지금까지 쓴 한국어 글. 2단계 모드에서는 먼저 모국어로 쓴 초안 문장도 함께</td><td>Google (Firebase AI Logic / Gemini API)</td><td>단어·문장 패턴 힌트 생성</td></tr>
+<tr><td>즉석 질문(첨삭 화면)</td><td>일기 전체(첨삭본이 있으면 첨삭본)와 입력한 질문</td><td>Google (Firebase AI Logic / Gemini API)</td><td>질문에 대한 답변 생성</td></tr>
+<tr><td>AI 대화</td><td>입력한 메시지, 이 일기에 대한 최근 대화 최대 10개, AI 기억 최대 15건(인물 이름 등), 이전 대화 요약, 관련 과거 일기 최대 2편의 발췌, 오늘 일기(프라이버시 모드에서는 첫 문장만 — 아래 참고)</td><td>Google (Firebase AI Logic / Gemini API)</td><td>대화 답변 생성</td></tr>
+<tr><td>대화 요약(대화 화면을 나갈 때)</td><td>이 일기에 대한 최근 대화 최대 30개</td><td>Google (Firebase AI Logic / Gemini API)</td><td>다음 대화에 참고할 2~3문장 요약 생성(요약은 기기에 저장)</td></tr>
 <tr><td>오늘의 사진</td><td>일기에서 추출한 영어 검색 키워드</td><td>Pexels / Unsplash</td><td>사진 후보 검색</td></tr>
+<tr><td>앱 실행 시 보안 확인·설정 받기</td><td>일기·대화 내용은 보내지 않음. Firebase SDK 가 보내는 앱 무결성 확인 정보(Google Play Integrity 판정), Firebase 설치 ID, 앱 버전, OS 버전, 기기 언어·국가·시간대 설정</td><td>Google (Firebase App Check / Remote Config)</td><td>AI 요청이 정품 앱에서 온 것인지 확인, 사진 기능 사용 여부·AI 모델 이름 등 앱 설정값 수신</td></tr>
+<tr><td>업데이트·평가 안내</td><td>앱 버전 등 Google Play 가 처리하는 정보</td><td>Google Play (인앱 업데이트·인앱 리뷰)</td><td>새 버전 안내, 별점 평가 창 표시</td></tr>
 <tr><td>광고</td><td>광고 ID 및 광고 SDK 표준 데이터</td><td>Google AdMob</td><td>광고 게재(EEA/UK 는 동의 후)</td></tr>
 </table>
 
-<h2>2. 기기에만 저장되는 데이터</h2>
-<p>일기, 첨삭 결과, 표현 노트, 대화 기록, AI 기억, 설정은 앱의 로컬 저장소에만
-보관되며 앱 삭제 시 함께 삭제됩니다. 백업은 앱 내 "데이터 내보내기"를 이용하세요.
+<p><b>프라이버시 모드의 적용 범위</b> — 설정의 "대화에 일기 원문 대신 요약만 보내기"(프라이버시 모드)는
+<b>AI 대화에서 오늘 일기를 보내는 부분에만</b> 적용됩니다. 켜면 오늘 일기 대신 그 일기의
+<b>첫 문장을 최대 약 180자까지 그대로</b> 보냅니다(AI 가 만든 요약이 아닙니다).
+AI 첨삭·첨삭 직후 자동 처리·힌트·즉석 질문·대화 요약, 그리고 대화에 함께 보내는
+과거 일기 발췌·AI 기억에는 적용되지 않으므로, 이 기능들을 사용하면 위 표의 내용이 그대로 전송됩니다.</p>
+
+<h2>2. 기기에 저장되는 데이터</h2>
+<p>일기, 첨삭 결과, 표현 노트, 대화 기록, AI 기억, 설정은 앱의 로컬 저장소에
+보관되며, 개발자 서버로는 보내지 않습니다. 다만 대화 기록·AI 기억·과거 일기의 일부는
+위 표와 같이 대화 생성·요약을 위해 Google 의 AI 로 전송됩니다. 앱 삭제 시 기기의 데이터는
+함께 삭제됩니다. 백업은 앱 내 "데이터 내보내기"를 이용하세요.
 안드로이드 자동 백업은 꺼져 있습니다.</p>
 
 <h2>3. 내 API 키 (BYOK)</h2>

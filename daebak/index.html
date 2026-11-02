@@ -13,25 +13,41 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 </head>
 <body>
 <h1>Daebak — Privacy Policy</h1>
-<p class="small">Effective: 2026-08-25 · <a href="ko.html">한국어</a></p>
+<p class="small">Effective: 2026-11-02 · <a href="ko.html">한국어</a></p>
 
 <p>"Daebak" (the "app") works without any account or sign-up.
-Your diary and all content you write are stored <b>only on your device</b>.
-The developer does not operate any server that collects or stores personal data.</p>
+Your diary and all content you write are stored <b>on your device</b>.
+The developer does not operate any server that collects or stores personal data.
+However, when you use the AI features, part or all of your diary and chats is sent to Google's AI as listed below.</p>
 
 <h2>1. Data we collect</h2>
 <p>The developer collects and stores <b>no personal data</b>. However, when you
 use the features below, the listed data is sent to external services for processing.</p>
 <table>
 <tr><th>Feature</th><th>Data sent</th><th>Recipient</th><th>Purpose</th></tr>
-<tr><td>AI feedback / hints / chat</td><td>Diary text, or a summary only when Privacy Mode is on</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Generating feedback, hints and chat replies</td></tr>
+<tr><td>AI feedback</td><td>The full text of the Korean diary you wrote</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Generating feedback</td></tr>
+<tr><td>Automatic processing right after feedback</td><td>The full corrected diary</td><td>Google (Firebase AI Logic / Gemini API)</td><td>(1) Extracting facts for long-term memory used in later chats (names of people, places, hobbies, goals, routines, pets, work, etc., up to 5; results are saved in "AI Memory" on your device) (2) Extracting photo-of-the-day search keywords and classifying your mood (one of six)</td></tr>
+<tr><td>Hints</td><td>The Korean text written so far; in two-step mode, also the draft sentence you wrote first in your own language</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Generating word and sentence-pattern hints</td></tr>
+<tr><td>Quick questions (feedback screen)</td><td>The full diary (the corrected version if available) and your question</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Answering your question</td></tr>
+<tr><td>AI chat</td><td>Your message, up to 10 recent messages about this diary, up to 15 AI Memory items (such as people's names), a summary of earlier chats, excerpts from up to 2 related past diaries, and today's diary (only the first sentence in Privacy Mode — see below)</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Generating chat replies</td></tr>
+<tr><td>Chat summary (when you leave the chat screen)</td><td>Up to 30 recent messages about this diary</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Creating a 2–3 sentence summary for later chats (the summary is saved on your device)</td></tr>
 <tr><td>Photo of the day</td><td>English search keywords extracted from your entry</td><td>Pexels / Unsplash</td><td>Searching photo candidates</td></tr>
+<tr><td>Security check and settings at app start</td><td>No diary or chat content. Data sent by the Firebase SDK: app integrity information (Google Play Integrity verdict), Firebase installation ID, app version, OS version, and device language, country and time-zone settings</td><td>Google (Firebase App Check / Remote Config)</td><td>Confirming that AI requests come from the genuine app; receiving app settings such as whether the photo feature is on and which AI model to use</td></tr>
+<tr><td>Update and rating prompts</td><td>Information processed by Google Play, such as the app version</td><td>Google Play (in-app updates / in-app review)</td><td>Notifying you of new versions; showing the rating dialog</td></tr>
 <tr><td>Ads</td><td>Advertising ID and standard ad-SDK data</td><td>Google AdMob</td><td>Serving ads (with consent in EEA/UK)</td></tr>
 </table>
 
-<h2>2. Data stored only on your device</h2>
+<p><b>What Privacy Mode covers</b> — The "Send only a summary to chat, not the diary text" setting (Privacy Mode)
+applies <b>only to how today's diary is sent in AI chat</b>. When it is on, instead of today's diary the app sends
+<b>its first sentence as written, up to about 180 characters</b> (this is not an AI-generated summary).
+It does not apply to AI feedback, the automatic processing after feedback, hints, quick questions, chat summaries,
+or the past-diary excerpts and AI Memory sent with chats — using those features sends the data in the table above as is.</p>
+
+<h2>2. Data stored on your device</h2>
 <p>Diary entries, feedback results, expression notes, chat history, AI memory and
-settings are stored only in the app's local storage. They are removed when you
+settings are stored in the app's local storage and are never sent to a developer server.
+However, parts of your chat history, AI memory and past diaries are sent to Google's AI to generate and
+summarize chats, as listed above. Data on your device is removed when you
 uninstall the app. Use in-app "Export data" for backups. Android auto-backup is disabled.</p>
 
 <h2>3. Your own API key (BYOK)</h2>

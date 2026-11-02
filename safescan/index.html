@@ -44,7 +44,7 @@
 <div class="wrap">
   <h1>Privacy Policy — SafeScan</h1>
   <p class="lang"><strong>English</strong> · <a href="ko.html">한국어</a></p>
-  <p class="eff"><strong>Effective: 20 October 2026</strong> (first effective 15 September 2026)</p>
+  <p class="eff"><strong>Effective: 2 November 2026</strong> (first effective 15 September 2026)</p>
 
   <p>App name: <strong>SafeScan</strong> (Korean: 세이프스캔) · Package: <code>com.almightyhg.safescan</code></p>
 
@@ -75,6 +75,7 @@
     <tr><td><strong>Only when you tap "Report phishing"</strong></td><td>The reported address, its domain, the reason you chose, the app's verdict, the time, your anonymous ID and (if you wrote one) your note</td><td>Firebase Firestore (the developer's project)</td><td>So that, after review, the address can be added to the blocklist. The note is optional and the screen asks you not to include personal details.</td></tr>
     <tr><td>On launch</td><td>A per-installation <strong>anonymous ID</strong> (a random value created by Firebase Anonymous Authentication) and a device-integrity token (Play Integrity / App Check)</td><td>Firebase</td><td>So that the same person reporting the same address several times counts once, and so that requests from tampered apps can be rejected. The ID is not linked to a name, phone number or email, and changes if you uninstall the app. In handling these requests Firebase receives your device's <strong>IP address</strong> (unavoidable for any internet request); the developer does not store it.</td></tr>
     <tr><td>On launch (at most every 12 hours)</td><td>A settings request including the app version</td><td>Firebase Remote Config</td><td>To download settings such as the blocklist update URL and feature switches. No personal data is sent.</td></tr>
+    <tr><td>When the app's conditions (such as launch count) are met and it shows the review prompt</td><td>A request to show the review dialog (the app itself sends no personal data)</td><td>Google Play (in-app review)</td><td>To show the rating and review dialog. The dialog is displayed by Google Play, and any review you write is handled under Google Play's policies.</td></tr>
     <tr><td>When an ad is shown</td><td>Device information such as the advertising ID (processed by Google)</td><td>Google AdMob</td><td>See section 4</td></tr>
   </table>
   <ul>
@@ -149,6 +150,7 @@
     <tr><td>2026-09-18</td><td>Added Favorites and QR Books (v1.1.0). Sections 2 and 7 now state that codes you save yourself are never deleted automatically. Nothing new leaves the device</td></tr>
     <tr><td>2026-10-01</td><td>Section 3 now lists Google lookup usage counts (monthly numbers and response types, stored per anonymous ID). No addresses or results are sent</td></tr>
     <tr><td>2026-10-20</td><td>Section 4 now lists the four data types the ads SDK collects automatically (approximate location, app interactions, diagnostics, device identifiers); section 6 corrected from "location" to "precise location"; section 3 now states that Firebase receives the IP address and that short-link checks may retry with GET (matching the Play Data safety answers and the app's actual behaviour). The app itself is unchanged</td></tr>
+    <tr><td>2026-11-02</td><td>Section 3 now lists the Google Play in-app review prompt request (matching the app's actual behaviour). The app itself is unchanged</td></tr>
   </table>
 
   <footer>© 2026 SmartDaisso (스마트다있소) · <a href="/">SmartDaisso home</a></footer>
