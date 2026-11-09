@@ -13,16 +13,18 @@ table{border-collapse:collapse;width:100%}td,th{border:1px solid #ddd;padding:8p
 </head>
 <body>
 <h1>Daebak — Privacy Policy</h1>
-<p class="small">Effective: 2026-11-02 · <a href="ko.html">한국어</a></p>
+<p class="small">Effective: 2026-11-09 · <a href="ko.html">한국어</a></p>
 
 <p>"Daebak" (the "app") works without any account or sign-up.
 Your diary and all content you write are stored <b>on your device</b>.
 The developer does not operate any server that collects or stores personal data.
-However, when you use the AI features, part or all of your diary and chats is sent to Google's AI as listed below.</p>
+However, when you use the AI features, part or all of your diary and chats is sent to Google's AI as listed below,
+and usage statistics that contain no diary content are sent to Google Analytics.</p>
 
 <h2>1. Data we collect</h2>
-<p>The developer collects and stores <b>no personal data</b>. However, when you
-use the features below, the listed data is sent to external services for processing.</p>
+<p>The developer does <b>not collect or store anything you write</b>, such as your diary or chats. However, when you
+use the features below, the listed data is sent to external services for processing, and the developer views the
+usage statistics (Google Analytics) through reports provided by Google.</p>
 <table>
 <tr><th>Feature</th><th>Data sent</th><th>Recipient</th><th>Purpose</th></tr>
 <tr><td>AI feedback</td><td>The full text of the Korean diary you wrote</td><td>Google (Firebase AI Logic / Gemini API)</td><td>Generating feedback</td></tr>
@@ -34,7 +36,9 @@ use the features below, the listed data is sent to external services for process
 <tr><td>Photo of the day</td><td>English search keywords extracted from your entry</td><td>Pexels / Unsplash</td><td>Searching photo candidates</td></tr>
 <tr><td>Security check and settings at app start</td><td>No diary or chat content. Data sent by the Firebase SDK: app integrity information (Google Play Integrity verdict), Firebase installation ID, app version, OS version, and device language, country and time-zone settings</td><td>Google (Firebase App Check / Remote Config)</td><td>Confirming that AI requests come from the genuine app; receiving app settings such as whether the photo feature is on and which AI model to use</td></tr>
 <tr><td>Update and rating prompts</td><td>Information processed by Google Play, such as the app version</td><td>Google Play (in-app updates / in-app review)</td><td>Notifying you of new versions; showing the rating dialog</td></tr>
-<tr><td>Ads</td><td>Advertising ID and standard ad-SDK data</td><td>Google AdMob</td><td>Serving ads (with consent in EEA/UK)</td></tr>
+<tr><td>Usage statistics</td><td>No diary or chat content. An app-instance ID (a random value set for each installation), usage records such as app opens and sessions, book-recommendation views, taps, dismissals and "View on Amazon" taps (book ID and placement only), app version, OS version, device model and language, and an approximate region derived from your IP address. Advertising ID collection is turned off</td><td>Google (Google Analytics for Firebase)</td><td>Measuring app usage and how well book recommendations work. Not used for ad personalization. Not collected in regions where we ask for ad consent, such as the EEA and the UK</td></tr>
+<tr><td>Book recommendations (Settings · feedback results)</td><td>When you tap "View on Amazon", the address of that book's Amazon product page</td><td>Amazon (Amazon app or browser)</td><td>Opening the book's product page. After you leave the app, Amazon's privacy policy applies</td></tr>
+<tr><td>Ads</td><td>Standard ad-SDK data such as the advertising ID, an approximate location derived from your IP address, app interactions like ad views and clicks, and app and device performance diagnostics</td><td>Google AdMob</td><td>Serving ads, measuring ad performance and preventing fraud (with consent in EEA/UK)</td></tr>
 </table>
 
 <p><b>What Privacy Mode covers</b> — The "Send only a summary to chat, not the diary text" setting (Privacy Mode)
@@ -42,6 +46,12 @@ applies <b>only to how today's diary is sent in AI chat</b>. When it is on, inst
 <b>its first sentence as written, up to about 180 characters</b> (this is not an AI-generated summary).
 It does not apply to AI feedback, the automatic processing after feedback, hints, quick questions, chat summaries,
 or the past-diary excerpts and AI Memory sent with chats — using those features sends the data in the table above as is.</p>
+
+<p><b>How Google processes AI requests</b> — Content sent through the AI features is subject to Google's Gemini API terms.
+Google may log requests and responses for a limited period to detect and prevent violations, and requests processed on
+the unpaid tier may be used by Google to improve its products and may be read by human reviewers.
+If you use your own API key (BYOK) in Settings, the tier of that key applies.
+We recommend not writing sensitive information, such as government ID numbers or health details, in your diary.</p>
 
 <h2>2. Data stored on your device</h2>
 <p>Diary entries, feedback results, expression notes, chat history, AI memory and
@@ -57,14 +67,19 @@ secure storage and used only to call Google's API.</p>
 <h2>4. International transfer</h2>
 <p>The recipients above (Google, Pexels, Unsplash) may process data outside your
 country. Their own privacy policies apply.</p>
+<p>Usage statistics go to Google Analytics for Firebase, operated by Google LLC (USA). They are sent over an encrypted
+connection (TLS) from time to time while you use the app and processed in Google data centers in the United States and
+elsewhere. The items and purpose are those in the "Usage statistics" row of section 1, and the data is deleted after
+Google Analytics' data-retention period (2 months).</p>
 
 <h2>5. Children</h2>
 <p>This app is not directed to children.</p>
 
 <h2>6. Deleting your data</h2>
-<p>All data lives on your device — deleting it in the app or uninstalling the app
-removes it immediately. AI chat memory can be deleted individually or entirely in
-Settings &gt; AI Memory.</p>
+<p>Data stored on your device is removed immediately when you delete it in the app or
+uninstall the app. AI chat memory can be deleted individually or entirely in
+Settings &gt; AI Memory. Usage statistics are linked only to the app-instance ID, so the developer cannot tell who you are,
+and they are deleted automatically after the retention period. Reinstalling the app starts a new ID.</p>
 
 <h2>7. Contact</h2>
 <p><a href="mailto:smartdaitso@gmail.com">smartdaitso@gmail.com</a></p>
